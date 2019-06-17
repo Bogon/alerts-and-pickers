@@ -460,7 +460,7 @@ Download and drop `/Source` folder in your project.
 ## Authors
 
 * **Roman Volodko** -  [dillidon](https://github.com/dillidon)
-
+* **Bogon** -  [bogon](https://github.com/bogon)
 ## Communication
 
 * If you **found a bug**, open an issue.
