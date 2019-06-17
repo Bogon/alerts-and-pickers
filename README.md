@@ -454,8 +454,8 @@ Download and drop `/Source` folder in your project.
 
 ## Requirements
 
-* Swift 4
-* iOS 11 or higher
+* Swift 5
+* iOS 10 or higher
 
 ## Authors
 
