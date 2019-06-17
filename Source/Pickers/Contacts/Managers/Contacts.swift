@@ -168,7 +168,7 @@ public struct Contacts {
         let contactStore: CNContactStore = CNContactStore()
         var contacts: [CNContact] = [CNContact]()
         let predicate: NSPredicate
-
+        /// utf16Offset(in:)
         if string.endIndex.encodedOffset > 0 {
             predicate = CNContact.predicateForContacts(matchingName: string)
         } else {

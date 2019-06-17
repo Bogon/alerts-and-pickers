@@ -84,7 +84,7 @@ final class LocalePickerViewController: UIViewController {
     fileprivate lazy var indicatorView: UIActivityIndicatorView = {
         $0.color = .lightGray
         return $0
-    }(UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge))
+    }(UIActivityIndicatorView(style: .whiteLarge))
     
     // MARK: Initialize
     
@@ -176,7 +176,8 @@ final class LocalePickerViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     
-                    let alert = UIAlertController(style: .alert, title: error.title, message: error.message)
+                    let alert = UIAlertController.init(title: error.title, message: error.message, preferredStyle: .alert)
+                    //(style: .alert, title: error.title, message: error.message)
                     alert.addAction(title: "OK", style: .cancel) { action in
                         self.indicatorView.stopAnimating()
                         self.alertController?.dismiss(animated: true)
@@ -297,7 +298,7 @@ extension LocalePickerViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
         if searchController.isActive { return 0 }
         tableView.scrollToRow(at: IndexPath(row: 0, section: index), at: .top , animated: false)
-        return sortedInfoKeys.index(of: title)!
+        return sortedInfoKeys.firstIndex(of: title)!
     }
     
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
